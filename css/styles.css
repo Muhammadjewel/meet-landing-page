@@ -1,14 +1,27 @@
+/* CUSTOM PROPS */
+:root {
+  --color-primary: #4d96a9;
+  --color-primary-hover: #8fe3f9;
+  --color-secondary: #855fb1;
+  --color-secondary-hover: #d9b8ff;
+  --color-text-dark: #28283d;
+  --color-text-light: #87879d;
+  --color-bg-body: #fafafa;
+}
+
+
 /* GLOBAL */
 body {
   display: flex;
   flex-direction: column;
   padding: 0;
   margin: 0;
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  background-color: #fff;
-  color: #222;
+  font-family: "Red Hat Display", "Arial", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 162.5%;
+  background-color: var(--color-bg-body);
+  color: var(--color-text-light);
 }
 
 img {
