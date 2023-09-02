@@ -1,12 +1,16 @@
 /* CUSTOM PROPS */
 :root {
   --color-primary: #4d96a9;
-  --color-primary-hover: #8fe3f9;
+  --color-primary-light: #71c0d4;
+  --color-primary-lightest: #8fe3f9;
   --color-secondary: #855fb1;
-  --color-secondary-hover: #d9b8ff;
+  --color-secondary-light: #b18bdd;
+  --color-secondary-lightest: #d9b8ff;
   --color-text-dark: #28283d;
   --color-text-light: #87879d;
   --color-bg-body: #fafafa;
+
+  --container-padding: 24px;
 }
 
 
@@ -71,18 +75,119 @@ select:-webkit-autofill:focus {
 /* CONTAINER */
 .container {
   width: 100%;
-  max-width: 1200px;
-  padding-left: 50px;
-  padding-right: 50px;
+  max-width: 1148px;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
   margin-left: auto;
   margin-right: auto;
 }
 
 
+/* BUTTON */
+.button {
+  display: inline-block;
+  padding: 16px 40px;
+  border-radius: 29px;
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 162.5%;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:active {
+  opacity: 0.6;
+}
+
+.button--primary {
+  background-color: var(--color-primary);
+}
+
+.button--primary:hover {
+  background-color: var(--color-primary-light);
+}
+
+.button--secondary {
+  background-color: var(--color-secondary);
+}
+
+.button--secondary:hover {
+  background-color: var(--color-secondary-light);
+}
+
+.button--primary .button__highlight {
+  color: var(--color-primary-lightest);
+}
+
+.button--secondary .button__highlight {
+  color: var(--color-secondary-lightest);
+}
+
+
+/* LOGO */
+.logo {
+  display: block;
+  text-decoration: none;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.logo:active {
+  opacity: 0.6;
+}
+
 /* MAIN-CONTENT */
 .main-content {
   flex-grow: 1;
 }
+
+
+/* HEADER */
+.header {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.header__container {
+  display: flex;
+  justify-content: center;
+}
+
+
+/* HERO */
+.hero {
+  padding-top: 6px;
+  padding-bottom: 64px;
+  text-align: center;
+}
+
+.hero__img {
+  width: 100%;
+  margin-bottom: 48px;
+}
+
+.hero__heading {
+  margin-bottom: 24px;
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 110%;
+  color: var(--color-text-dark);
+}
+
+.hero__text {
+  margin-bottom: 32px;
+}
+
+.hero__actions {
+  display: grid;
+  justify-items: center;
+  gap: 16px;
+}
+
 
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
