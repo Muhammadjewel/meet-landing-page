@@ -170,6 +170,12 @@ select:-webkit-autofill:focus {
   margin-bottom: 48px;
 }
 
+.hero__info {
+  max-width: 28.5625rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .hero__heading {
   margin-bottom: 24px;
   font-size: 2.5rem;
@@ -197,4 +203,68 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
 
+}
+
+/* 640px */
+@media only screen and (min-width: 40em) {
+  .hero {
+    padding-top: 16px;
+    padding-bottom: 80px;
+  }
+
+  .hero__img {
+    margin-bottom: 72px;
+  }
+
+  .hero__heading {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .hero__actions {
+    grid-template-columns: auto auto;
+    justify-content: center;
+  }
+}
+
+/* 900px */
+@media only screen and (min-width: 56.25em) {
+  body {
+    font-size: 1.125rem;
+  }
+
+  .header {
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+
+  .hero {
+    padding-top: 48px;
+    padding-bottom: 118px;
+    background-image: url("../img/hero-bg-desktop.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 1504px 358px;
+  }
+
+  @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (   min--moz-device-pixel-ratio: 2),
+    only screen and (     -o-min-device-pixel-ratio: 2/1),
+    only screen and (        min-device-pixel-ratio: 2),
+    only screen and (                min-resolution: 192dpi),
+    only screen and (                min-resolution: 2dppx) {
+    .hero {
+      background-image: url("../img/hero-bg-desktop@2x.png");
+    }
+  }
+
+  .hero__picture, .hero__img {
+    display: none;
+  }
+
+  .hero__heading {
+    margin-bottom: 34px;
+    font-size: 4rem;
+  }
 }
