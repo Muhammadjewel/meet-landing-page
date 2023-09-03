@@ -94,6 +94,7 @@ select:-webkit-autofill:focus {
   color: #fff;
   text-align: center;
   text-decoration: none;
+  white-space: nowrap;
   cursor: pointer;
 }
 
@@ -219,6 +220,8 @@ select:-webkit-autofill:focus {
   border: 1px solid rgba(135, 135, 157, 0.25);
   border-radius: 50%;
   font-weight: 900;
+  background-color: var(--color-bg-body);
+  color: var(--color-text-light);
 }
 
 
@@ -241,6 +244,7 @@ select:-webkit-autofill:focus {
 .index-info {
   padding-top: 64px;
   padding-bottom: 64px;
+  margin-bottom: 95px;
   text-align: center;
 }
 
@@ -279,6 +283,48 @@ select:-webkit-autofill:focus {
 }
 
 
+/* CTA */
+.cta {
+  position: relative;
+  z-index: 1;
+  padding-top: 92px;
+  padding-bottom: 72px;
+  background-color: var(--color-primary);
+  background-image: url("../img/cta-bg-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  color: var(--color-bg-body);
+}
+
+.cta__section-index {
+  position: absolute;
+  z-index: 1;
+  bottom: calc(100% - 28px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cta__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cta__heading {
+  margin-bottom: 24px;
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 112.5%;
+}
+
+.cta__text {
+  margin-bottom: 32px;
+  font-size: 1.125rem;
+}
+
+
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),
@@ -286,7 +332,9 @@ only screen and (     -o-min-device-pixel-ratio: 2/1),
 only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
-
+  .cta {
+    background-image: url("../img/cta-bg-mobile@2x.jpg");
+  }
 }
 
 /* 640px */
@@ -309,6 +357,35 @@ only screen and (                min-resolution: 2dppx) {
     grid-template-columns: auto auto;
     justify-content: center;
   }
+
+  .cta {
+    padding-bottom: 64px;
+    background-image: url("../img/cta-bg-tablet.jpg");
+  }
+
+  .cta__heading {
+    max-width: 28.625rem;
+    margin-bottom: 32px;
+    font-size: 2.5rem;
+    line-height: 1.1;
+  }
+
+  .cta__text {
+    max-width: 36rem;
+    margin-bottom: 40px;
+  }
+
+  @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (   min--moz-device-pixel-ratio: 2),
+    only screen and (     -o-min-device-pixel-ratio: 2/1),
+    only screen and (        min-device-pixel-ratio: 2),
+    only screen and (                min-resolution: 192dpi),
+    only screen and (                min-resolution: 2dppx) {
+    .cta {
+      background-image: url("../img/cta-bg-tablet@2x.jpg");
+    }
+  }
 }
 
 /* 768px */
@@ -318,6 +395,7 @@ only screen and (                min-resolution: 2dppx) {
   }
 
   .index-info__gallery {
+    align-self: stretch;
     margin-bottom: 48px;
   }
 
@@ -392,5 +470,46 @@ only screen and (                min-resolution: 2dppx) {
 
   .index-info__gallery {
     margin-bottom: 80px;
+  }
+
+  .cta {
+    background-image: url("../img/cta-bg-desktop.jpg");
+  }
+
+  @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (   min--moz-device-pixel-ratio: 2),
+    only screen and (     -o-min-device-pixel-ratio: 2/1),
+    only screen and (        min-device-pixel-ratio: 2),
+    only screen and (                min-resolution: 192dpi),
+    only screen and (                min-resolution: 2dppx) {
+    .cta {
+      background-image: url("../img/cta-bg-desktop@2x.jpg");
+    }
+  }
+}
+
+/* 1148px */
+@media only screen and (min-width: 71.75em) {
+  .cta {
+    padding-top: 116px;
+    padding-bottom: 104px;
+  }
+
+  .cta__container {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .cta__heading {
+    max-width: 21.875rem;
+    margin-bottom: 0;
+    margin-right: 124px;
+  }
+
+  .cta__text {
+    max-width: 21.875rem;
+    margin-bottom: 0;
+    margin-right: 92px;
   }
 }
