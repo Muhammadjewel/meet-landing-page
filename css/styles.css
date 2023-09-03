@@ -223,9 +223,6 @@ select:-webkit-autofill:focus {
 
 
 /* GALLERY */
-.gallery {
-}
-
 .gallery__list {
   display: grid;
   grid-template-columns: 1fr 1fr;
