@@ -195,6 +195,34 @@ select:-webkit-autofill:focus {
 }
 
 
+/* SECTION INDEX */
+.section-index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-index::before {
+  width: 1px;
+  height: 84px;
+  background-color: var(--color-text-light);
+  content: "";
+  opacity: 0.25;
+}
+
+.section-index__circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  border: 1px solid rgba(135, 135, 157, 0.25);
+  border-radius: 50%;
+  font-weight: 900;
+}
+
+
+
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),
